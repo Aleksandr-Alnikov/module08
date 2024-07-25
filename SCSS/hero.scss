@@ -1,0 +1,236 @@
+@use "variables" as *;
+@use "media" as *;
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+.active {
+  position: relative;
+  color: $my-gold;
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 3px;
+    background-color: $my-gold;
+    z-index: 2;
+    right: -15px;
+    top: -6px;
+  }
+}
+
+.hero {
+  margin-bottom: 494px;
+
+  @include laptop {
+    margin-bottom: 180px;
+  }
+
+  @include tablet {
+    margin-bottom: 692px;
+  }
+
+  @include mobile {
+    margin-bottom: 106px;
+  }
+
+  @include mobile-mini {
+    margin-bottom: 70px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 734px;
+
+    @include desktop {
+      margin-bottom: 494px;
+    }
+
+    @include laptop {
+      margin-bottom: 0;
+    }
+
+    @include tablet {
+      gap:25px;
+    }
+  }
+
+  &__social-list {
+    padding-top: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__tab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 64px;
+    align-items: end;
+    position: fixed;
+    right: 69px;
+    top: 247px;
+    z-index: 2;
+
+    &:after {
+      position: absolute;
+      content: "";
+      background-color: $my-white;
+      width: 1px;
+      height: 240px;
+      top: 42px;
+      right: -14px;
+      z-index: 1;
+    }
+
+    @include laptop {
+      display: none;
+    }
+
+    @include mobile-mini {
+      display: flex;
+      gap: 23px;
+      padding-top: 128px;
+      align-items: end;
+    }
+  }
+
+  &__tab-link {
+    font-weight: 700;
+    font-size: 18px;
+
+    @include mobile-mini {
+      font-size: 12px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto;
+
+    @include laptop {
+      max-width: 762px;
+    }
+  }
+
+  &__title-main {
+    font-family: "Playfair Display SC";
+    font-weight: 600;
+    font-size: 88px;
+    line-height: 1.14;
+    text-transform: capitalize;
+    max-width: 979px;
+    margin: 0;
+    margin-bottom: 32px;
+
+    @include laptop {
+      font-size: 60px;
+      line-height: 1.67;
+    }
+
+    @include tablet {
+      font-size: 35px;
+      line-height: 2.27;
+    }
+
+    @include mobile-mini {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 145px;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 32px;
+
+    @include mobile-mini {
+      gap: 10px;
+    }
+  }
+
+  &__subtitle-rud {
+    display: inline-block;
+    width: 72px;
+    height: 2px;
+    background-color: $my-gold;
+
+    @include mobile-mini {
+      width: 40px;
+    }
+  }
+
+  &__subtitle-text {
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0.33em;
+    text-transform: uppercase;
+    color: $my-gold;
+
+    @include tablet {
+      font-size: 16px;
+      letter-spacing: 0.38em;
+    }
+
+    @include mobile-mini {
+      font-size: 12px;
+      letter-spacing: .5em;
+    }
+  }
+
+  &__link-scroll {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+
+    &:after {
+      content: "";
+      background-image: url("../img/downward.svg");
+      width: 16px;
+      height: 24px;
+      display: block;
+      position: absolute;
+      top: 3px;
+      left: 130px;
+
+      @include mobile-mini {
+        top: 0px;
+        left: 86px;
+      }
+    }
+
+    @include tablet {
+      font-size: 18px;
+    }
+
+    @include mobile-mini {
+      font-size: 14px;
+    }
+  }
+}
+
+.active {
+  position: relative;
+  color: $my-gold;
+
+  &after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 3px;
+    background-color: $my-gold;
+    z-index: 2;
+    right: -15px;
+    top: -6px;
+  }
+}

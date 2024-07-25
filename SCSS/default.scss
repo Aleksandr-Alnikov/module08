@@ -1,0 +1,130 @@
+@use "fonts" as *;
+@use "variables" as *;
+@use "media" as *;
+
+
+
+html {
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+:root {
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $my-bg;
+  color: $my-white;
+  font-family: $second-fonts, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+  background-image: url("../img/backgraund.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*background-position: center;*/
+
+  @include tablet {
+    background-size: 1443px, cover;
+  }
+
+  @include mobile {
+    background-image: url("../img/BG_480.png");
+    background-size: contain;
+  }
+}
+
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+/*
+Доступно скрываю элементы
+*/
+
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+
+/*
+Пример контейнера
+
+Если контейнер 1180px по макету,
+то для max-width прибавляем паддинги 30px*2,
+в итоге 1240px
+Чтобы контент не прижимался к краям экрана
+*/
+
+.container {
+  max-width: 1920px;
+  padding: 0 80px;
+  margin: 0 auto;
+
+  @include desktop {
+    padding: 0 60px;
+  }
+
+  @include mobile-mini {
+    padding: 0 10px;
+  }
+}
+

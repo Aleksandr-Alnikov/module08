@@ -1,0 +1,92 @@
+@use "variables" as *;
+@use "media" as *;
+
+.header {
+
+  &__burger {
+    display: none;
+
+    @include tablet {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__navigation {
+    margin: 0 auto;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    padding-top: 66px;
+    margin-bottom: 186px;
+    align-items: center;
+
+    @include tablet {
+      margin-bottom: 164px;
+    }
+
+    @include mobile {
+      margin-bottom: 210px;
+    }
+
+    @include mobile-mini {
+      margin-bottom: 68px;
+    }
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    font-family: Playfair Display SC;
+
+    @include mobile {
+      font-size: 44px;
+    }
+
+    @include mobile-mini {
+      font-size: 35px;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__item-link, &__link {
+    font-size: 18px;
+    font-weight: 700;
+    transition-duration: .3s;
+    transition-property: color;
+  }
+
+  &__item-link:hover {
+    color: $my-gold;
+  }
+
+  &__link {
+    position: relative;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__link:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/accoun.svg");
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: -32px;
+  }
+}

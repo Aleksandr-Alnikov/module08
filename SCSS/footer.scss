@@ -1,0 +1,131 @@
+@use "variables" as *;
+@use "media" as *;
+
+
+.footer {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 179px 0 229px;
+
+    @include desktop {
+      padding: 0 139px;
+    }
+
+    @include laptop {
+      padding: 0 32px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile-mini {
+      padding: 0 10px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 196px;
+
+    @include laptop {
+      gap: 57px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    font-family: "Playfair Display SC";
+    margin-bottom: 19px;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.78;
+    max-width: 365px;
+    margin-bottom: 62px;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 51px;
+    }
+
+    @include tablet {
+      max-width: 260px;
+      font-size: 7px;
+      line-height: 2.67;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.78;
+    opacity: .5;
+
+    @include laptop {
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin-bottom: 16px;
+    transition-duration: .3s;
+    transition-property: color;
+
+    &:hover {
+      color: $my-gold;
+    }
+
+    &:first-child {
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.33;
+      color: $my-gold;
+
+      @include laptop {
+        font-size: 14px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright-2 {
+    display: none;
+
+    @include tablet {
+      display: block;
+      font-size: 12px;
+      line-height: 2.67;
+      opacity: .5;
+      margin-bottom: 57px;
+    }
+  }
+
+  &__link {
+    @include tablet {
+      font-size: 12px;
+    }
+  }
+}

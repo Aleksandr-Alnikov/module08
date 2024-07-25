@@ -1,0 +1,145 @@
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 179px 0 229px;
+}
+
+.footer__block {
+    display: flex;
+    gap: 196px;
+}
+
+.footer__logo {
+    font-family: "Playfair Display SC";
+    margin-bottom: 19px;
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+}
+
+.footer__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.78;
+    max-width: 365px;
+    margin-bottom: 62px;
+}
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.78;
+    opacity: .5;
+}
+
+.footer__item {
+    margin-bottom: 16px;
+    transition-duration: .3s;
+    transition-property: color;
+}
+
+.footer__item:hover {
+    color: var(--my-gold);
+}
+
+.footer__item:first-child {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.33;
+    color: var(--my-gold);
+}
+
+.footer__item:last-child {
+    margin-bottom: 0;
+}
+
+.footer__copyright-2 {
+    display: none;
+}
+
+
+@media(max-width: 1536px) {
+    .footer__container {
+        padding: 0 139px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .footer__block {
+        gap: 57px;
+    }
+
+    .footer__text {
+        font-size: 16px;
+        line-height: 2;
+        margin-bottom: 51px;
+    }
+
+    .footer__copyright {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .footer__item:first-child {
+        font-size: 14px;
+    }
+
+    .footer__container {
+        padding: 0 32px;
+    }
+}
+
+@media(max-width: 768px) {
+    .footer__block {
+    }
+
+    .footer__text {
+        max-width: 260px;
+        margin-bottom: 117px;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 768px) {
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__block {
+        flex-direction: column;
+    }
+
+    .footer__copyright {
+        display: none;
+    }
+
+    .footer__copyright-2 {
+        display: block;
+        font-size: 12px;
+        line-height: 2.67;
+        opacity: .5;
+        margin-bottom: 57px;
+    }
+
+    .footer__text {
+        font-size: 7px;
+        line-height: 2.67;
+        margin-bottom: 20px;
+    }
+
+    .footer__link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer__container {
+        padding: 0 10px;
+    }
+}

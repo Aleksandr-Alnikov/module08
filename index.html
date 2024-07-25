@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MNTN</title>
+    <link rel="preload" href="fonts/poppins-v21-latin-regular.woff2" type="font/woff2" as="font"
+          crossorigin="">
+    <link rel="preload" href="fonts/poppins-v21-latin-700.woff2" type="font/woff2" as="font"
+          crossorigin="">
+
+    <link rel="preload" href="fonts/playfair-display-sc-v17-cyrillic_latin-regular.woff2" type="font/woff2" as="font"
+          crossorigin="">
+    <link rel="preload" href="fonts/playfair-display-sc-v17-cyrillic_latin-700.woff2" type="font/woff2" as="font"
+          crossorigin="">
+    <link rel="preload" href="fonts/playfair-display-sc-v17-cyrillic_latin-900.woff2" type="font/woff2" as="font"
+          crossorigin="">
+
+    <link rel="stylesheet" href="SCSS/index.scss">
+    <script type="module" src="scripts/index.js"></script>
+</head>
+<body>
+<header>
+    <div class="burger">
+        <div class="burger__top">
+            <span class="burger__logo">MNTN</span>
+            <button class="header__close-btn" type="button">
+                <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="37" height="37" fill="url(#pattern0_8313_464)"/>
+                    <defs>
+                        <pattern id="pattern0_8313_464" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_8313_464" transform="scale(0.01)"/>
+                        </pattern>
+                        <image id="image0_8313_464" width="100" height="100"
+                               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+ElEQVR4nO3dwW3CUBBF0amAOrJJU35ik75DUHqInQ2WvHAsiwB+M3NvBX842EYfxI8gIiIiIiIiIiIiMugU/TqFaW8RcYmIj+iTIuIaEe9hiPEVEVNEjE1QFBE/t5m/nVCWGFMTFC0wJieUNYzqKFrBsEDZwqiKog2MQ1FOt4fZ1sKWKOfI3/k2y56Zr0d8+hp2vFuqXCnKMmsHFGWbsTKKss5WEUXZZ6qEoiqzVEBRgRnKoCjx2suhKOGay6Io0VrLoyjBGtugyHht7VBkuKa2KDJaS3RHkcEarDoSRWD4oAgMHxSB4YMiMHxQBIYPisDwQREYPigCwwdFYPigCAwvlJHtEC+Uib2pXChjh43CLCgjGD4oIxjPRRnB8EmA+CRuWfkxJp4jfhgTKH4YEyivxRjZOnluumOj0OEnRiXTP15YUIww5kB5UHrgLQcUI4w5UO7smd/0DTzofTDmQNnZK78DH7hSfDDmQPmjI38dMnCl+GDMgWKEMdcexQkjuqM4YrRFccZoh5IBow1KJozyKBkxyqJkxiiHUgGjDEoljPQoFTHSolTGSIfSASMNCn/GH35/xj8fcWT3bjn4Sjn8DJFLE4w9KDan7FyaYGyhWGCsoVTHWEOxwliifDbBWKJYHptnf8jiE+s4MxEREREREREREYVZv2231t6+s/Y6AAAAAElFTkSuQmCC"/>
+                    </defs>
+                </svg>
+            </button>
+        </div>
+        <div class="burger__bot">
+            <nav class="burger__navigation-burger">
+                <ul class="burger__list-burger">
+                    <li class="burger__item-burger">
+                        <a class="burger__item-link-burger" href="#">Equipment</a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="burger__item-link-burger" href="#">About us</a>
+                    </li>
+                    <li class="burger__item">
+                        <a class="burger__item-link-burger" href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+            <a class="burger__link-burger" href="#">Account</a>
+            <ul class="burger__social-list-burger">
+                <li class="burger__social-item-buburgerrger">
+                    <a class="burger__social-link-burger" href="#">
+                        <svg width="15" height="84" viewBox="0 0 15 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.636 8.342L11.17 8.342L11.17 3.194L8.506 3.194L8.506 7.046L6.112 7.046L6.112
+                            3.194L1 3.194L1 0.115999L13.636 0.116L13.636 8.342ZM0.855999 14.5317C0.855999 13.5477 1.066
+                            12.6597 1.486 11.8677C1.906 11.0877 2.506 10.4697 3.286 10.0137C4.066 9.56975 4.978 9.34775
+                            6.022 9.34775C7.054 9.34775 7.96 9.57575 8.74 10.0317C9.532 10.4877 10.138 11.1117 10.558
+                            11.9037C10.978 12.6957 11.188 13.5837 11.188 14.5677C11.188 15.5517 10.978 16.4397 10.558
+                            17.2317C10.138 18.0237 9.532 18.6477 8.74 19.1038C7.96 19.5598 7.054 19.7878 6.022
+                            19.7878C4.99 19.7878 4.078 19.5537 3.286 19.0857C2.506 18.6297 1.906 17.9997 1.486
+                            17.1957C1.066 16.4037 0.855999 15.5157 0.855999 14.5317ZM3.52 14.5317C3.52 15.1197 3.736
+                            15.6177 4.168 16.0257C4.6 16.4457 5.218 16.6557 6.022 16.6557C6.826 16.6557 7.444 16.4517
+                            7.876 16.0437C8.308 15.6477 8.524 15.1557 8.524 14.5677C8.524 13.9677 8.308 13.4697 7.876
+                            13.0737C7.456 12.6777 6.838 12.4797 6.022 12.4797C5.218 12.4797 4.6 12.6717 4.168
+                            13.0557C3.736 13.4517 3.52 13.9437 3.52 14.5317ZM14.32 24.4987L0.999999 24.4987L0.999999
+                            21.4207L14.32 21.4207L14.32 24.4987ZM14.32 29.8073L0.999999 29.8073L0.999999 26.7293L14.32
+                            26.7293L14.32 29.8073ZM0.855998 36.6099C0.855998 35.6259 1.066 34.7379 1.486 33.9459C1.906
+                            33.1659 2.506 32.5479 3.286 32.0919C4.066 31.6479 4.978 31.4259 6.022 31.4259C7.054 31.4259
+                            7.96 31.6539 8.74 32.1099C9.532 32.5659 10.138 33.1899 10.558 33.9819C10.978 34.7739 11.188
+                            35.6619 11.188 36.6459C11.188 37.6299 10.978 38.5179 10.558 39.3099C10.138 40.1019 9.532
+                            40.7259 8.74 41.1819C7.96 41.6379 7.054 41.8659 6.022 41.8659C4.99 41.8659 4.078 41.6319
+                            3.286 41.1639C2.506 40.7079 1.906 40.0779 1.486 39.2739C1.066 38.4819 0.855998 37.5939
+                            0.855998 36.6099ZM3.52 36.6099C3.52 37.1979 3.736 37.6959 4.168 38.1039C4.6 38.5239
+                            5.218 38.7339 6.022 38.7339C6.826 38.7339 7.444 38.5299 7.876 38.1219C8.308 37.7259 8.524
+                            37.2339 8.524 36.6459C8.524 36.0459 8.308 35.5479 7.876 35.1519C7.456 34.7559 6.838 34.5579
+                            6.022 34.5579C5.218 34.5579 4.6 34.7499 4.168 35.1339C3.736 35.5299 3.52 36.0219 3.52
+                            36.6099ZM11.044 57.9168L0.999998 55.1988L0.999998 51.7968L7.516 50.2128L0.999998
+                            48.5748L0.999998 45.1908L11.044 42.4548L11.044 45.5328L3.862 46.9548L11.044 48.6468L11.044
+                            51.9048L3.898 53.6148L11.044 55.0188L11.044 57.9168ZM11.044 72.8231L0.999997
+                            72.8231L0.999997 69.7451L2.368 69.7451C1.924 69.4331 1.564 69.0071 1.288 68.4671C1.024
+                            67.9391 0.891997 67.3511 0.891997 66.7031C0.891997 65.9351 1.06 65.2571 1.396 64.6691C1.744
+                            64.0811 2.242 63.6251 2.89 63.3011C3.538 62.9771 4.3 62.8151 5.176 62.8151L11.044
+                            62.8151L11.044 65.8751L5.59 65.8751C4.918 65.8751 4.396 66.0491 4.024 66.3971C3.652 66.7451
+                            3.466 67.2131 3.466 67.8011C3.466 68.4011 3.652 68.8751 4.024 69.2231C4.396 69.5711 4.918
+                            69.7451 5.59 69.7451L11.044 69.7451L11.044 72.8231ZM0.855996 79.12C0.855997 78.244 1.006
+                            77.464 1.306 76.78C1.606 76.096 2.014 75.556 2.53 75.16C3.058 74.764 3.646 74.542 4.294
+                            74.494L4.294 77.536C3.946 77.572 3.664 77.734 3.448 78.022C3.232 78.31 3.124 78.664 3.124
+                            79.084C3.124 79.468 3.196 79.762 3.34 79.966C3.496 80.182 3.694 80.29 3.934 80.29C4.222
+                            80.29 4.432 80.14 4.564 79.84C4.708 79.54 4.864 79.054 5.032 78.382C5.2 77.662 5.374
+                            77.062 5.554 76.582C5.746 76.102 6.04 75.688 6.436 75.34C6.844 74.992 7.39 74.818 8.074
+                            74.818C8.65 74.818 9.172 74.974 9.64 75.286C10.12 75.61 10.498 76.078 10.774 76.69C11.05
+                            77.314 11.188 78.052 11.188 78.904C11.188 80.164 10.876 81.154 10.252 81.874C9.628 82.606
+                            8.8 83.026 7.768 83.134L7.768 80.29C8.116 80.242 8.392 80.086 8.596 79.822C8.8 79.57 8.902
+                            79.234 8.902 78.814C8.902 78.454 8.83 78.178 8.686 77.986C8.554 77.794 8.368 77.698 8.128
+                            77.698C7.84 77.698 7.624 77.848 7.48 78.148C7.336 78.46 7.192 78.94 7.048 79.588C6.856 80.332
+                             6.664 80.938 6.472 81.406C6.292 81.874 5.992 82.282 5.572 82.63C5.164 82.99 4.612 83.176
+                             3.916 83.188C3.328 83.188 2.8 83.02 2.332 82.684C1.876 82.36 1.516 81.886 1.252
+                             81.262C0.987996 80.65 0.855996 79.936 0.855996 79.12Z" fill="#354147"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="burger__social-item-burger">
+                    <a class="burger__social-link-burger" href="#">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.8 1.90735e-05H14.2C17.4032 1.90735e-05 20 2.59677 20 5.80002V14.2C20 17.4033
+                            17.4032 20 14.2 20H5.8C2.59675 20 0 17.4033 0 14.2V5.80002C0 2.59677 2.59675 1.90735e-05
+                            5.8 1.90735e-05ZM5.6 2C3.61177 2 2 3.61178 2 5.6V14.4C2 16.3882 3.61177 18 5.6
+                            18H14.4C16.3882 18 18 16.3882 18 14.4V5.6C18 3.61178 16.3882 2 14.4 2H5.6ZM15.25 3.5C15.9404
+                             3.5 16.5 4.05965 16.5 4.75C16.5 5.44036 15.9404 6 15.25 6C14.5596 6 14 5.44036 14 4.75C14
+                             4.05965 14.5596 3.5 15.25 3.5ZM10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10
+                             15C7.23857 15 5 12.7614 5 10C5 7.23858 7.23857 5 10 5ZM10 7C8.3431 7 7 8.3432 7 10C7
+                             11.6569 8.3431 13 10 13C11.6569 13 13 11.6569 13 10C13 8.3432 11.6569 7 10 7Z"
+                                  fill="#354147"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="burger__social-item-burger">
+                    <a class="burger__social-link-burger" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701
+                            21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112
+                             17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546
+                              11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601
+                              6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929
+                              2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098
+                              12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294
+                              14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26
+                              7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651
+                              19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605
+                              20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839
+                              6.87302 22.4592 6.01238Z" fill="#354147"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container header__container">
+        <span tabindex="0" class="header__logo">MNTN</span>
+        <nav class="header__navigation">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__item-link" href="#">Equipment</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__item-link" href="#">About us</a>
+                </li>
+                <li class="header__item">
+                    <a class="header__item-link" href="#">Blog</a>
+                </li>
+            </ul>
+        </nav>
+        <a class="header__link" href="#">Account</a>
+        <button class="header__burger">
+            <img src="img/Menu.svg" alt="Кнопка вызова меню">
+        </button>
+    </div>
+</header>
+<main>
+    <section id="hero" class="hero">
+        <div class="container hero__container">
+            <ul class="hero__social-list">
+                <li class="hero__social-item">
+                    <a class="hero__social-link" href="#">
+                        <svg width="15" height="84" viewBox="0 0 15 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.636 8.342L11.17 8.342L11.17 3.194L8.506 3.194L8.506 7.046L6.112 7.046L6.112
+                            3.194L1 3.194L1 0.115999L13.636 0.116L13.636 8.342ZM0.855999 14.5317C0.855999 13.5477 1.066
+                            12.6597 1.486 11.8677C1.906 11.0877 2.506 10.4697 3.286 10.0137C4.066 9.56975 4.978 9.34775
+                            6.022 9.34775C7.054 9.34775 7.96 9.57575 8.74 10.0317C9.532 10.4877 10.138 11.1117 10.558
+                            11.9037C10.978 12.6957 11.188 13.5837 11.188 14.5677C11.188 15.5517 10.978 16.4397 10.558
+                            17.2317C10.138 18.0237 9.532 18.6477 8.74 19.1038C7.96 19.5598 7.054 19.7878 6.022
+                            19.7878C4.99 19.7878 4.078 19.5537 3.286 19.0857C2.506 18.6297 1.906 17.9997 1.486
+                            17.1957C1.066 16.4037 0.855999 15.5157 0.855999 14.5317ZM3.52 14.5317C3.52 15.1197 3.736
+                            15.6177 4.168 16.0257C4.6 16.4457 5.218 16.6557 6.022 16.6557C6.826 16.6557 7.444 16.4517
+                            7.876 16.0437C8.308 15.6477 8.524 15.1557 8.524 14.5677C8.524 13.9677 8.308 13.4697 7.876
+                            13.0737C7.456 12.6777 6.838 12.4797 6.022 12.4797C5.218 12.4797 4.6 12.6717 4.168
+                            13.0557C3.736 13.4517 3.52 13.9437 3.52 14.5317ZM14.32 24.4987L0.999999 24.4987L0.999999
+                            21.4207L14.32 21.4207L14.32 24.4987ZM14.32 29.8073L0.999999 29.8073L0.999999 26.7293L14.32
+                            26.7293L14.32 29.8073ZM0.855998 36.6099C0.855998 35.6259 1.066 34.7379 1.486 33.9459C1.906
+                            33.1659 2.506 32.5479 3.286 32.0919C4.066 31.6479 4.978 31.4259 6.022 31.4259C7.054 31.4259
+                            7.96 31.6539 8.74 32.1099C9.532 32.5659 10.138 33.1899 10.558 33.9819C10.978 34.7739 11.188
+                            35.6619 11.188 36.6459C11.188 37.6299 10.978 38.5179 10.558 39.3099C10.138 40.1019 9.532
+                            40.7259 8.74 41.1819C7.96 41.6379 7.054 41.8659 6.022 41.8659C4.99 41.8659 4.078 41.6319
+                            3.286 41.1639C2.506 40.7079 1.906 40.0779 1.486 39.2739C1.066 38.4819 0.855998 37.5939
+                            0.855998 36.6099ZM3.52 36.6099C3.52 37.1979 3.736 37.6959 4.168 38.1039C4.6 38.5239
+                            5.218 38.7339 6.022 38.7339C6.826 38.7339 7.444 38.5299 7.876 38.1219C8.308 37.7259 8.524
+                            37.2339 8.524 36.6459C8.524 36.0459 8.308 35.5479 7.876 35.1519C7.456 34.7559 6.838 34.5579
+                            6.022 34.5579C5.218 34.5579 4.6 34.7499 4.168 35.1339C3.736 35.5299 3.52 36.0219 3.52
+                            36.6099ZM11.044 57.9168L0.999998 55.1988L0.999998 51.7968L7.516 50.2128L0.999998
+                            48.5748L0.999998 45.1908L11.044 42.4548L11.044 45.5328L3.862 46.9548L11.044 48.6468L11.044
+                            51.9048L3.898 53.6148L11.044 55.0188L11.044 57.9168ZM11.044 72.8231L0.999997
+                            72.8231L0.999997 69.7451L2.368 69.7451C1.924 69.4331 1.564 69.0071 1.288 68.4671C1.024
+                            67.9391 0.891997 67.3511 0.891997 66.7031C0.891997 65.9351 1.06 65.2571 1.396 64.6691C1.744
+                            64.0811 2.242 63.6251 2.89 63.3011C3.538 62.9771 4.3 62.8151 5.176 62.8151L11.044
+                            62.8151L11.044 65.8751L5.59 65.8751C4.918 65.8751 4.396 66.0491 4.024 66.3971C3.652 66.7451
+                            3.466 67.2131 3.466 67.8011C3.466 68.4011 3.652 68.8751 4.024 69.2231C4.396 69.5711 4.918
+                            69.7451 5.59 69.7451L11.044 69.7451L11.044 72.8231ZM0.855996 79.12C0.855997 78.244 1.006
+                            77.464 1.306 76.78C1.606 76.096 2.014 75.556 2.53 75.16C3.058 74.764 3.646 74.542 4.294
+                            74.494L4.294 77.536C3.946 77.572 3.664 77.734 3.448 78.022C3.232 78.31 3.124 78.664 3.124
+                            79.084C3.124 79.468 3.196 79.762 3.34 79.966C3.496 80.182 3.694 80.29 3.934 80.29C4.222
+                            80.29 4.432 80.14 4.564 79.84C4.708 79.54 4.864 79.054 5.032 78.382C5.2 77.662 5.374
+                            77.062 5.554 76.582C5.746 76.102 6.04 75.688 6.436 75.34C6.844 74.992 7.39 74.818 8.074
+                            74.818C8.65 74.818 9.172 74.974 9.64 75.286C10.12 75.61 10.498 76.078 10.774 76.69C11.05
+                            77.314 11.188 78.052 11.188 78.904C11.188 80.164 10.876 81.154 10.252 81.874C9.628 82.606
+                            8.8 83.026 7.768 83.134L7.768 80.29C8.116 80.242 8.392 80.086 8.596 79.822C8.8 79.57 8.902
+                            79.234 8.902 78.814C8.902 78.454 8.83 78.178 8.686 77.986C8.554 77.794 8.368 77.698 8.128
+                            77.698C7.84 77.698 7.624 77.848 7.48 78.148C7.336 78.46 7.192 78.94 7.048 79.588C6.856 80.332
+                             6.664 80.938 6.472 81.406C6.292 81.874 5.992 82.282 5.572 82.63C5.164 82.99 4.612 83.176
+                             3.916 83.188C3.328 83.188 2.8 83.02 2.332 82.684C1.876 82.36 1.516 81.886 1.252
+                             81.262C0.987996 80.65 0.855996 79.936 0.855996 79.12Z" fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="hero__social-item">
+                    <a class="hero__social-link" href="#">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.8 1.90735e-05H14.2C17.4032 1.90735e-05 20 2.59677 20 5.80002V14.2C20 17.4033
+                            17.4032 20 14.2 20H5.8C2.59675 20 0 17.4033 0 14.2V5.80002C0 2.59677 2.59675 1.90735e-05
+                            5.8 1.90735e-05ZM5.6 2C3.61177 2 2 3.61178 2 5.6V14.4C2 16.3882 3.61177 18 5.6
+                            18H14.4C16.3882 18 18 16.3882 18 14.4V5.6C18 3.61178 16.3882 2 14.4 2H5.6ZM15.25 3.5C15.9404
+                             3.5 16.5 4.05965 16.5 4.75C16.5 5.44036 15.9404 6 15.25 6C14.5596 6 14 5.44036 14 4.75C14
+                             4.05965 14.5596 3.5 15.25 3.5ZM10 5C12.7614 5 15 7.23858 15 10C15 12.7614 12.7614 15 10
+                             15C7.23857 15 5 12.7614 5 10C5 7.23858 7.23857 5 10 5ZM10 7C8.3431 7 7 8.3432 7 10C7
+                             11.6569 8.3431 13 10 13C11.6569 13 13 11.6569 13 10C13 8.3432 11.6569 7 10 7Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="hero__social-item">
+                    <a class="hero__social-link" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701
+                            21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112
+                             17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546
+                              11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601
+                              6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929
+                              2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098
+                              12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294
+                              14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26
+                              7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651
+                              19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605
+                              20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839
+                              6.87302 22.4592 6.01238Z" fill="white"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="hero__title">
+                <div class="hero__subtitle">
+                    <span class="hero__subtitle-rud"></span>
+                    <span class="hero__subtitle-text">A Hiking guide</span>
+                </div>
+                <h1 class="hero__title-main">Be prepared for the Mountains and beyond!</h1>
+                <a class="hero__link-scroll" href="#offers">scroll down</a>
+            </div>
+            <ul class="hero__tab-list">
+                <li class="hero__tab-item">
+                    <a href="#hero" class="hero__tab-link">Start</a>
+                </li>
+                <li class="hero__tab-item">
+                    <a href="#01" class="hero__tab-link">01</a>
+                </li>
+                <li class="hero__tab-item">
+                    <a href="#02" class="hero__tab-link">02</a>
+                </li>
+                <li class="hero__tab-item">
+                    <a href="#03" class="hero__tab-link">03</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="offers" class="offers">
+        <h2 class="visually-hidden">Наши предложения</h2>
+        <div class="container offers__container">
+            <button class="offers__left-btn">
+                <svg width="128" height="128" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M338 419L175 256L338 93" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <button class="offers__right-btn">
+                <svg width="128" height="128" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M175 419L338 256L175 93" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="offers__current"></div>
+            <ul class="offers__list">
+                <li id="01" class="offers__item">
+                    <div class="offers__wrapper">
+                        <div class="offers__title">
+                            <span class="offers__title-rud"></span>
+                            <h3 class="offers__title-main">GEt Started</h3>
+                        </div>
+                        <p class="offers__subtitle offers__subtitle-font">What level of hiker are you?</p>
+                        <p class="offers__text">
+                            Determining what level of hiker you are can be an important tool when planning future hikes.
+                            This hiking level guide will help you plan hikes according to different hike ratings set by
+                            various websites like All Trails and Modern Hiker. What type of hiker are you – novice,
+                            moderate, advanced moderate, expert, or expert backpacker?
+                        </p>
+                        <a class="offers__link" href="#">read more</a>
+                    </div>
+                    <div class="offers__img">
+                        <picture>
+                            <source srcset="img/01_1536.png" media="(max-width: 1536px)">
+                            <source srcset="img/01_1024.png" media="(max-width: 1024px)">
+                            <img class="offers__img-1" src="img/01.png" alt="GEt Started">
+                        </picture>
+                    </div>
+                </li>
+
+                <li id="02" class="offers__item offers__item-2">
+                    <span class="offers__current"></span>
+                    <div class="offers__wrapper">
+                        <div class="offers__title">
+                            <span class="offers__title-rud"></span>
+                            <h3 class="offers__title-main">Hiking Essentials</h3>
+                        </div>
+                        <p class="offers__subtitle">Picking the right Hiking Gear!</p>
+                        <p class="offers__text">
+                            The nice thing about beginning hiking is that you don’t really need any special gear, you
+                            can
+                            probably get away with things you already have.
+                            Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and
+                            regular
+                            clothes, which will get heavy and chafe wif they get sweaty or wet.
+                        </p>
+                        <a class="offers__link" href="#">read more</a>
+                    </div>
+                    <div class="offers__img offers__img-2">
+                        <picture>
+                            <source srcset="img/02_1536.png" media="(max-width: 1536px)">
+                            <source srcset="img/02_1024.png" media="(max-width: 1024px)">
+                            <img class="offers__img-1" src="img/02.png" alt="Hiking Essentials">
+                        </picture>
+                    </div>
+                </li>
+
+                <li id="03" class="offers__item offers__item-3">
+                    <span class="offers__current"></span>
+                    <div class="offers__wrapper">
+                        <div class="offers__title">
+                            <span class="offers__title-rud"></span>
+                            <h3 class="offers__title-main">where you go is the key</h3>
+                        </div>
+                        <p class="offers__subtitle">Understand Your Map & Timing</p>
+                        <p class="offers__text">
+                            To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag.
+                            Read over the guide, study the map, and have a good idea of what to expect. I like to know
+                            what
+                            my next landmark is as I hike. For example, I’ll read the guide and know that say, in a
+                            mile,
+                            I make a right turn at the junction..
+                        </p>
+                        <a class="offers__link" href="#">read more</a>
+                    </div>
+                    <div class="offers__img offers__img-3">
+                        <picture>
+                            <source srcset="img/03_1536.png" media="(max-width: 1536px)">
+                            <source srcset="img/03_1024.png" media="(max-width: 1024px)">
+                            <img class="offers__img-1" src="img/03.png" alt="where you go is the key">
+                        </picture>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container footer__container">
+        <div class="footer__left">
+            <p class="footer__logo">
+                MNTN
+            </p>
+            <p class="footer__text">
+                Get out there & discover your next slope, mountain & destination!
+            </p>
+            <p class="footer__copyright">
+                Copyright 2019 MNTN, Inc. Terms & Privacy
+            </p>
+        </div>
+        <div class="footer__block">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    More on The Blog
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">About MNTN</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Contributors & Writers</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Write For Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Contact Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    More on MNTN
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">The Team</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Jobs</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Press</a>
+                </li>
+            </ul>
+            <p class="footer__copyright-2">
+                Copyright 2019 MNTN, Inc. Terms & Privacy
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

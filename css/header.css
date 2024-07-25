@@ -1,0 +1,89 @@
+.header__burger {
+    display: none;
+}
+
+.header__navigation {
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    padding-top: 66px;
+    margin-bottom: 186px;
+    align-items: center;
+}
+
+.header__logo {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    font-family: Playfair Display SC;
+}
+
+.header__list {
+    display: flex;
+    gap: 30px;
+}
+
+.header__item-link, .header__link {
+    font-size: 18px;
+    font-weight: 700;
+    transition-duration: .3s;
+    transition-property: color;
+}
+
+.header__item-link:hover {
+    color: var(--my-gold);
+}
+
+.header__link {
+    position: relative;
+}
+
+.header__link:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/accoun.svg");
+    width: 24px;
+    height: 24px;
+    top: -2px;
+    left: -32px;
+}
+
+
+@media(max-width: 768px) {
+    .header__burger {
+        display: block;
+        margin-left: auto;
+    }
+
+    .header__navigation, .header__link {
+        display: none;
+    }
+
+    .header__container {
+        margin-bottom: 164px;
+    }
+}
+
+@media(max-width: 480px) {
+    .header__logo {
+        font-size: 44px;
+    }
+
+    .header__container {
+        margin-bottom: 210px
+    }
+}
+
+@media(max-width: 320px) {
+    .header__logo {
+        font-size: 35px;
+        letter-spacing: 0.01em;
+    }
+
+    .header__container {
+        margin-bottom: 68px;
+    }
+}

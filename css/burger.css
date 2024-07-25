@@ -1,0 +1,118 @@
+.header__burger-menu {
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    padding: 64px;
+    border-radius: 0 0 15px 15px;
+    transform: translateY(-280px);
+    transition-duration: .7s;
+}
+
+.open__burger {
+    transform: translateY(0);
+}
+
+.header__burger-logo {
+    font-weight: 700;
+    font-size: 32px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: var(--my-bg);
+}
+
+.header__burger-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 64px;
+}
+
+.header__item-link-burger, .header__link-burger {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--burg-font);
+}
+
+.header__link-burger:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/cart_burg.svg");
+    width: 25px;
+    height: 26px;
+    top: -4px;
+    left: -26px;
+}
+
+.header__burger-bot {
+    display: flex;
+}
+
+.header__list-burger {
+    display: flex;
+    gap: 40px;
+}
+
+.header__link-burger {
+    margin-left: auto;
+}
+
+.hero__social-list-burger {
+    display: none;
+    margin-left: auto;
+    width: 24px;
+    position: absolute;
+    top: 157px;
+    left: 272px;
+}
+
+
+@media (max-width: 480px) {
+    .header__burger-menu {
+        padding: 64px 40px 57px;
+        transform: translateY(-335px);
+    }
+
+    .open__burger {
+        transform: translateY(0);
+    }
+
+    .header__list-burger {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .header__burger-menu {
+        padding: 50px 25px;
+    }
+
+    .header__item-link-burger {
+        font-size: 14px;
+    }
+
+    .header__link-burger {
+        font-size: 14px;
+        padding-left: 25px;
+    }
+
+    .header__list-burger {
+        gap: 10px;
+    }
+
+    .header__burger-bot {
+        display: block;
+    }
+
+    .header__navigation-burger {
+        margin-bottom: 40px;
+    }
+
+    .header__link-burger:before {
+        left: -5px;
+    }
+
+    .hero__social-list-burger {
+        display: block;
+    }
+}
